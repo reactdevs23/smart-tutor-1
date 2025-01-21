@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  gap: 10px;
+}
+.xl2 {
+  padding-top: 8px;
+}
+.info {
+  line-height: 155%;
+}
+.bold {
+  font-weight: 600;
+}

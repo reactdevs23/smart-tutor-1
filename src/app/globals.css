@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+:root {
+  --Primitive-Blue-500: #00b5db;
+  --Primitive-Green-500: #22c55e;
+  --Secondary: #22234d;
+  --Primitive-0: #fff;
+  --Primitive-50: #f6f6f9;
+  --Primitive-25: #fafafd;
+  --Primitive-100: #f0f0f5;
+  --Primitive-200: #d4dadc;
+  --Primitive-300: #cacadf;
+  --Primitive-400: #9495bf;
+  --Primitive-500: #72739d;
+  --Primitive-600: #858d8e;
+  --Primitive-800: #171b1c;
+  --Primitive-700: #171b1c;
+  --Primitive-900: #939798;
+  --Primitive-950: #0e0f39;
+  --radius: 8px;
+  --Placeholder: #9495bf;
+
+  --Error: #ff4864;
+  --Warning: #ffb729;
+  --Success: #24c788;
+}
+#root {
+  min-height: 100vh;
+}
+body {
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--Primitive-0);
+}
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 95px;
+}
+.container2 {
+  max-width: 1110px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 95px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+button,
+a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
+}
+button:hover,
+a:hover {
+  opacity: 0.8;
+  transform: translateY(-3px);
+}
+button:active {
+  transform: translateY(0px);
+}
+input {
+  line-height: 100%;
+}
+.bold {
+  font-weight: 700;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  background: rgba(250, 250, 250, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Base-50);
+  border-radius: 4px;
+}
+.overflow {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Primitive-Blue-500) rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+/* Chrome, Edge, and Safari browsers */
+.overflow::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 5px;
+}
+.overflow::-webkit-scrollbar-track {
+  border-radius: 5px;
+  width: 3px;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  border-radius: 100vh;
+  border: none;
+  border-radius: 5px;
+  width: 3px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.highlight {
+  color: var(--Primary-Default);
+}
+input::placeholder {
+  color: var(--Placeholder);
+  opacity: 0.8;
+}
+.highlight {
+  color: var(--Primitive-Blue-500);
+}
+.swiper-scrollbar {
+  display: none !important;
+}
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--Primitive-Blue-500) !important;
+}
+.recharts-rectangle {
+  pointer-events: none !important;
+}
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  -webkit-appearance: none; /* For Safari */
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--Primitive-Blue-500);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Style the checked state */
+input[type="checkbox"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--Primitive-Blue-500);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type="radio"] {
+  -webkit-appearance: none; /* For Safari */
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--Primitive-Blue-500);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Style the checked state */
+input[type="radio"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--Primitive-Blue-500);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

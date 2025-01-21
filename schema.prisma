@@ -1,0 +1,76 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["fullTextSearchPostgres"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = "postgres://neondb_owner:npg_RTMPxUZGj06c@ep-shiny-paper-a1kgsjua-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+}
+
+model Student {
+    id              String    @id @default(cuid())
+    name            String
+    email           String
+    description     String?
+    profile_picture String?
+    curriculum_type String?
+    subjects        Json?
+    class           String?
+    password        String?
+    created_at      DateTime  @default(now())
+    updated_at      DateTime? @updatedAt()
+    is_verified     Boolean   @default(false)
+
+    @@map("students")
+}
+
+model Teacher {
+    id              String    @id @default(cuid())
+    name            String
+    email           String
+    description     String?
+    profile_picture String?
+    curriculum_type String?
+    salary          Int?
+    subjects        Json?
+    classes         Json?
+    password        String?
+    created_at      DateTime  @default(now())
+    updated_at      DateTime? @updatedAt()
+    availibility    Boolean   @default(false)
+    is_verified     Boolean   @default(false)
+
+    @@map("teachers")
+}
+
+model Admin {
+    id              String  @id @default(cuid())
+    name            String
+    email           String
+    description     String?
+    profile_picture String?
+    password        String?
+    is_verified     Boolean @default(false)
+
+    @@map("admin_users")
+}
+
+model ResetPassword {
+    id    String  @id @default(cuid())
+    code  Int?
+    email String?
+    role  String?
+    token String  @default(cuid())
+
+    @@map("reset_password_requests")
+}
+
+model Verification {
+    id      String  @id @default(cuid())
+    email   String?
+    user_id String?
+    role    String?
+
+    @@map("verification_requests")
+}

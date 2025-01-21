@@ -1,0 +1,16 @@
+.wrapper {
+}
+.outlet {
+  display: grid;
+  align-items: center;
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+  }
+  .outlet {
+    display: block;
+    padding: 48px 0;
+    padding-top: 24px;
+    min-height: auto;
+  }
+}

@@ -1,0 +1,110 @@
+.text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 14px;
+  color: #171b1c;
+}
+.primitive0 {
+  color: var(--Primitive-0);
+}
+.primitive200 {
+  color: var(--Primitive-200);
+}
+.primitive300 {
+  color: var(--Primitive-300);
+}
+.primitive400 {
+  color: var(--Primitive-400);
+}
+.primitive500 {
+  color: var(--Primitive-500);
+}
+.primitive600 {
+  color: var(--Primitive-600);
+}
+.primitive900 {
+  color: var(--Primitive-900);
+}
+.primitive950 {
+  color: var(--Primitive-950);
+}
+.primitive700 {
+  color: #858d8e;
+}
+.primitive800 {
+  color: var(--Primitive-800);
+}
+.primitiveError {
+  color: var(--Primitive-Error);
+}
+.secondary {
+  color: var(--secondary);
+}
+.xs {
+  font-size: 12px;
+}
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 14px;
+}
+.base {
+  font-size: 16px;
+}
+.lg {
+  font-size: 18px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.xl4 {
+  font-size: 32px;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.textLeft {
+  text-align: left;
+}
+.bold {
+  font-weight: 700;
+}
+.semiBold {
+  font-weight: 500;
+}
+.font600 {
+  font-weight: 600;
+}
+@media only screen and (max-width: 991px) {
+  .lg {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .xl2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .lg {
+    font-size: 16px;
+  }
+  .xl {
+    font-size: 18px;
+  }
+}

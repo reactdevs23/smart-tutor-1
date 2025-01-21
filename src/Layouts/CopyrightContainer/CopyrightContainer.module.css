@@ -1,0 +1,45 @@
+.wrapper {
+  background: #000f15;
+}
+.copyRightContainer {
+  border-top: 1px solid rgba(114, 115, 157, 0.24);
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.brandName {
+  font-weight: 500px;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  max-width: 32px;
+  width: 100%;
+}
+.policyAndCondition {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media only screen and (max-width: 991px) {
+  .copyRightContainer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .logoContainer {
+    order: -1;
+  }
+  .policyAndCondition {
+    justify-content: center;
+  }
+  .copyRight {
+    text-align: center;
+  }
+}

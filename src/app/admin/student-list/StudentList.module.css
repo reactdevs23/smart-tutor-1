@@ -1,0 +1,102 @@
+/* TeacherList.module.css */
+.wrapper {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tableContainer {
+  max-width: 100%;
+  max-height: 400px; /* Adjust height as needed */
+  overflow: auto;
+  border: 1px solid #e4edef;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Ensures horizontal scroll for smaller screens */
+}
+
+.table th,
+.table td {
+  border: 1px solid #e4edef;
+  padding: 8px 12px;
+  text-align: left;
+}
+.table th:first-child,
+.table td:first-child {
+  border-left: none;
+}
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+  text-align: center;
+}
+.table th {
+  background-color: #f6feff;
+  position: sticky;
+  top: 0; /* Sticky header for vertical scrolling */
+  z-index: 1;
+  border-top: none;
+}
+
+/* .table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+} */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profileImg {
+  width: 32px;
+  height: 32px;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.wrapper .available {
+  color: #019529;
+  background: rgb(1, 149, 41, 0.1);
+  margin-right: auto;
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 30px;
+  width: max-content;
+  text-transform: uppercase;
+}
+.wrapper .notAvailable {
+  color: #eb4335;
+  background: rgb(235, 67, 53, 0.1);
+  margin-right: auto;
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 30px;
+  width: max-content;
+  text-transform: uppercase;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.moreButton {
+  font-size: 24px;
+  cursor: pointer;
+}
+.list .myClass {
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding: 30px 0;
+  }
+}

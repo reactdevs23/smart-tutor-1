@@ -1,0 +1,154 @@
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 106%;
+  font-size: 30px;
+  color: var(--Primitive950);
+}
+.primitiveBlue500 {
+  color: var(--Primitive-Blue-500);
+}
+.primitive0 {
+  color: var(--Primitive-0);
+}
+.primitive200 {
+  color: var(--Primitive-200);
+}
+.primitive300 {
+  color: var(--Primitive-300);
+}
+.primitive400 {
+  color: var(--Primitive-400);
+}
+.primitive500 {
+  color: var(--Primitve-500);
+}
+.primitive600 {
+  color: var(--Primitive-600);
+}
+.primitive900 {
+  color: var(--Primitive-900);
+}
+.primitive950 {
+  color: var(--Primitive-950);
+}
+.primitive700 {
+  color: var(--Primitive-700);
+}
+.primitive800 {
+  color: var(--Primitive-800);
+}
+.xs {
+  font-size: 12px;
+}
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 14px;
+}
+.base {
+  font-size: 16px;
+}
+.lg {
+  font-size: 18px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.xl4 {
+  font-size: 36px;
+}
+.xl5 {
+  font-size: 48px;
+}
+.xl6 {
+  font-size: 60px;
+}
+.xl7 {
+  font-size: 80px;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.semiBold {
+  font-weight: 500;
+}
+.font600 {
+  font-weight: 600;
+}
+.regular {
+  font-weight: 400;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1280px) {
+  .xl7 {
+    font-size: 72px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .xl6 {
+    font-size: 48px;
+  }
+  .xl7 {
+    font-size: 60px;
+  }
+  .xl5 {
+    font-size: 40px;
+  }
+  .xl4 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .xl6 {
+    font-size: 40px;
+  }
+  .xl7 {
+    font-size: 48px;
+  }
+  .xl5 {
+    font-size: 32px;
+  }
+  .xl4 {
+    font-size: 28px;
+  }
+  .xl3 {
+    font-size: 26px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .xl7 {
+    font-size: 40px;
+  }
+  .xl6 {
+    font-size: 36px;
+  }
+  .xl5 {
+    font-size: 28px;
+  }
+  .xl4 {
+    font-size: 24px;
+  }
+  .lg {
+    font-size: 16px;
+  }
+}

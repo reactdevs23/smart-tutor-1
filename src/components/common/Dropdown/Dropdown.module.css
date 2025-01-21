@@ -1,0 +1,92 @@
+.dropdown {
+  position: relative;
+  width: 100%;
+  background: var(--Primitive-0);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.label {
+  color: var(--Primitive-700);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+.labelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--Primitive-200);
+}
+.sm .labelContainer {
+  padding: 8px 14px;
+}
+.arrow {
+  font-size: 14px;
+  color: var(--Primitive-300);
+  cursor: pointer;
+  margin-left: auto;
+}
+.dropdownMain {
+  min-width: calc(100% + 2px);
+  width: max-content;
+  position: absolute;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 8px);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  border: 1px solid var(--Primitive-200);
+  border-radius: 4px;
+  background: var(--Primitive-0);
+}
+
+.list {
+  height: 0;
+  overflow: hidden;
+}
+
+.dropdownMain.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.active .list {
+  overflow: auto;
+  max-height: 250px;
+  height: 100%;
+  opacity: 1;
+  pointer-events: all;
+  text-transform: capitalize;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  color: var(--Primitive-700);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.listItem.active {
+  background: var(--Primitive-Blue-500);
+}
+.listItem.active {
+  color: var(--Primitive-0);
+}
+.listItem:hover {
+  opacity: 0.8;
+}

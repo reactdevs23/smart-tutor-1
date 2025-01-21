@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0px 40px;
+}
+.option label {
+  text-transform: capitalize;
+}
+.label {
+  color: var(--Primitive-700);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+.question {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.option {
+  margin: 10px 0;
+  cursor: pointer;
+}
+.option label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.option label input {
+  cursor: pointer;
+}
+.label {
+  margin-right: 10px;
+}

@@ -1,0 +1,1283 @@
+{
+	"info": {
+		"_postman_id": "e2e86982-c181-4d48-803f-070862568212",
+		"name": "Smart-Tutor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32593435"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"1234\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"name\": \"{{$randomFullName}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/student/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "http://localhost:3000/api/student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"1234\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"name\": \"{{$randomFullName}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/student/auth/signup",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"student",
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "vary",
+											"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 25 Dec 2024 16:15:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm543iupy0007ye7gvhu0byqo\",\n        \"name\": \"May Steuber\",\n        \"email\": \"Tamia.Satterfield@hotmail.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$m55dWA2PcoB9oWn80CiqiuLlO22eheXXTS1ZvflWr303ZJuTbg1oW\",\n        \"created_at\": \"2024-12-25T16:15:04.967Z\",\n        \"updated_at\": \"2024-12-25T16:15:04.967Z\",\n        \"is_verified\": false\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Tamia.Satterfield@hotmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/student/auth/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/student/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cm5438zpa0006ye7g0i85vm9b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/student?id=cm5438zpa0006ye7g0i85vm9b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "cm5438zpa0006ye7g0i85vm9b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 10:18:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm5438zpa0006ye7g0i85vm9b\",\n        \"name\": \"Otis Kerluke\",\n        \"email\": \"Vickie52@yahoo.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$NJB5yvLkC25rRXDC59ZbJ.97BpxuTMAyTYSSx5.4EWt/2JrFgu1zi\",\n        \"created_at\": \"2024-12-25T16:07:24.808Z\",\n        \"updated_at\": \"2024-12-25T16:07:24.808Z\",\n        \"is_verified\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/student/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cm5cd5wcb0005ye7sg140eq3h"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/student?id=cm5438zpa0006ye7g0i85vm9b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "cm5438zpa0006ye7g0i85vm9b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 10:18:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm5438zpa0006ye7g0i85vm9b\",\n        \"name\": \"Otis Kerluke\",\n        \"email\": \"Vickie52@yahoo.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$NJB5yvLkC25rRXDC59ZbJ.97BpxuTMAyTYSSx5.4EWt/2JrFgu1zi\",\n        \"created_at\": \"2024-12-25T16:07:24.808Z\",\n        \"updated_at\": \"2024-12-25T16:07:24.808Z\",\n        \"is_verified\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Otis Kerluke\",\r\n    \"email\": \"Vickie52@yahoo.com\",\r\n    \"description\": null,\r\n    \"profile_picture\": null,\r\n    \"curriculum_type\": \"string\",\r\n    \"subjects\": [\r\n        \"string\"\r\n    ],\r\n    \"class\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/student/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"student",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cm5438zpa0006ye7g0i85vm9b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"meehdi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/student/cm5438zpa0006ye7g0i85vm9b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student",
+										"cm5438zpa0006ye7g0i85vm9b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 10:39:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm5438zpa0006ye7g0i85vm9b\",\n        \"name\": \"meehdi\",\n        \"email\": \"Vickie52@yahoo.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"created_at\": \"2024-12-25T16:07:24.808Z\",\n        \"updated_at\": \"2024-12-31T10:39:42.919Z\",\n        \"is_verified\": false\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"1234\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"name\": \"{{$randomFullName}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "http://localhost:3000/api/student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"1234\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"name\": \"{{$randomFullName}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/student/auth/signup",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"student",
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "vary",
+											"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 25 Dec 2024 16:15:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm543iupy0007ye7gvhu0byqo\",\n        \"name\": \"May Steuber\",\n        \"email\": \"Tamia.Satterfield@hotmail.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$m55dWA2PcoB9oWn80CiqiuLlO22eheXXTS1ZvflWr303ZJuTbg1oW\",\n        \"created_at\": \"2024-12-25T16:15:04.967Z\",\n        \"updated_at\": \"2024-12-25T16:15:04.967Z\",\n        \"is_verified\": false\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Kennedi_Jacobson77@hotmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/auth/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"1234\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"name\": \"{{$randomFullName}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/teacher/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"teacher",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "http://localhost:3000/api/student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"1234\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"name\": \"{{$randomFullName}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/student/auth/signup",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"student",
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "vary",
+											"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 25 Dec 2024 16:15:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm543iupy0007ye7gvhu0byqo\",\n        \"name\": \"May Steuber\",\n        \"email\": \"Tamia.Satterfield@hotmail.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$m55dWA2PcoB9oWn80CiqiuLlO22eheXXTS1ZvflWr303ZJuTbg1oW\",\n        \"created_at\": \"2024-12-25T16:15:04.967Z\",\n        \"updated_at\": \"2024-12-25T16:15:04.967Z\",\n        \"is_verified\": false\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Janie68@yahoo.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/teacher/auth/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"teacher",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/teacher/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teacher",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cm5438zpa0006ye7g0i85vm9b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/student?id=cm5438zpa0006ye7g0i85vm9b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "cm5438zpa0006ye7g0i85vm9b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 10:18:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm5438zpa0006ye7g0i85vm9b\",\n        \"name\": \"Otis Kerluke\",\n        \"email\": \"Vickie52@yahoo.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$NJB5yvLkC25rRXDC59ZbJ.97BpxuTMAyTYSSx5.4EWt/2JrFgu1zi\",\n        \"created_at\": \"2024-12-25T16:07:24.808Z\",\n        \"updated_at\": \"2024-12-25T16:07:24.808Z\",\n        \"is_verified\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Otis Kerluke\",\r\n    \"email\": \"Vickie52@yahoo.com\",\r\n    \"description\": null,\r\n    \"profile_picture\": null,\r\n    \"curriculum_type\": \"string\",\r\n    \"subjects\": [\r\n        \"string\"\r\n    ],\r\n    \"class\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teacher/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teacher",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cm5438zpa0006ye7g0i85vm9b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"meehdi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/student/cm5438zpa0006ye7g0i85vm9b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student",
+										"cm5438zpa0006ye7g0i85vm9b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 10:39:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm5438zpa0006ye7g0i85vm9b\",\n        \"name\": \"meehdi\",\n        \"email\": \"Vickie52@yahoo.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"created_at\": \"2024-12-25T16:07:24.808Z\",\n        \"updated_at\": \"2024-12-31T10:39:42.919Z\",\n        \"is_verified\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "remove Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/teacher/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teacher",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cm5cd5wcb0005ye7sg140eq3h"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/student?id=cm5438zpa0006ye7g0i85vm9b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"student"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "cm5438zpa0006ye7g0i85vm9b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 10:18:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": \"cm5438zpa0006ye7g0i85vm9b\",\n        \"name\": \"Otis Kerluke\",\n        \"email\": \"Vickie52@yahoo.com\",\n        \"description\": null,\n        \"profile_picture\": null,\n        \"curriculum_type\": null,\n        \"subjects\": null,\n        \"class\": null,\n        \"password\": \"$2a$10$NJB5yvLkC25rRXDC59ZbJ.97BpxuTMAyTYSSx5.4EWt/2JrFgu1zi\",\n        \"created_at\": \"2024-12-25T16:07:24.808Z\",\n        \"updated_at\": \"2024-12-25T16:07:24.808Z\",\n        \"is_verified\": false\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Forgot",
+			"item": [
+				{
+					"name": "request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"cokapix959@citdaca.com\",\r\n    \"role\": \"STUDENT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/forgot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"forgot"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"cokapix959@citdaca.com\",\r\n    \"role\": \"STUDENT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/forgot",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"forgot"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 19:57:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"token\": \"cm65eoaov0001ye3ce08fymqr\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "verify",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/forgot?token=cm65eoaov0001ye3ce08fymqr&code=674790&role=STUDENT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"forgot"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "cm65eoaov0001ye3ce08fymqr"
+								},
+								{
+									"key": "code",
+									"value": "674790"
+								},
+								{
+									"key": "role",
+									"value": "STUDENT"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verify",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/forgot?token=cm65eoaov0001ye3ce08fymqr&code=674790&role=STUDENT",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"forgot"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "cm65eoaov0001ye3ce08fymqr"
+										},
+										{
+											"key": "code",
+											"value": "674790"
+										},
+										{
+											"key": "role",
+											"value": "STUDENT"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 20:00:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": {\n        \"is_valid\": true,\n        \"id\": \"cm65eoaov0000ye3c68ajuiv9\",\n        \"code\": 674790,\n        \"email\": \"cokapix959@citdaca.com\",\n        \"role\": \"STUDENT\",\n        \"token\": \"cm65eoaov0001ye3ce08fymqr\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"STUDENT\",\r\n    \"token\": \"cm65eoaov0001ye3ce08fymqr\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/forgot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"forgot"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\": \"STUDENT\",\r\n    \"token\": \"cm65eoaov0001ye3ce08fymqr\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/forgot",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"forgot"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 20:00:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": 200,\n    \"data\": \"Password updated!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/list/STUDENT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"list",
+						"STUDENT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/verification?user_id=cm65bid5j0006yexwn62c4k1z&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtNjViaWRlbTAwMDd5ZXh3czJ6bmM0M2IiLCJlbWFpbCI6ImNva2FwaXg5NTlAY2l0ZGFjYS5jb20iLCJ1c2VyX2lkIjoiY202NWJpZDVqMDAwNnlleHduNjJjNGsxeiIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzM3MzkzOTY4fQ.DZBRDf-OPooZIr9z-4QiOpecU61RZkhU421X1TOLb6A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"verification"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "cm65bid5j0006yexwn62c4k1z"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtNjViaWRlbTAwMDd5ZXh3czJ6bmM0M2IiLCJlbWFpbCI6ImNva2FwaXg5NTlAY2l0ZGFjYS5jb20iLCJ1c2VyX2lkIjoiY202NWJpZDVqMDAwNnlleHduNjJjNGsxeiIsInJvbGUiOiJTVFVERU5UIiwiaWF0IjoxNzM3MzkzOTY4fQ.DZBRDf-OPooZIr9z-4QiOpecU61RZkhU421X1TOLb6A"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

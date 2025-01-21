@@ -1,0 +1,63 @@
+.button {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 16px;
+
+  background: var(--Primitive-Blue-500);
+  color: var(--Primitive-0);
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 12px;
+}
+.base {
+  font-size: 14px;
+}
+
+.btnPrimary {
+  background: var(--Primitive-Blue-500);
+  color: var(--Primitive-0);
+}
+
+.transparent {
+  background: transparent;
+  color: var(--Primitive-Blue-500);
+  padding: 0;
+}
+.primitive50 {
+  background: var(--Primitive-50);
+  color: var(--Primitive-900);
+}
+.wFull {
+  width: 100%;
+}
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px; /* Add some space between the spinner and the text */
+}
+.loading {
+  gap: 8px;
+  opacity: 0.6;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}
