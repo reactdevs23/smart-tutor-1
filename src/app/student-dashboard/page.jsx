@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 import { patch } from "../../../lib/api";
 import { banner, errorImg, uploadImg } from "@/images";
 import clsx from "clsx";
+import Successfull from "@/components/Modal/Successfull/Successfull";
 
 // Constants for available options
 const mediums = ["Bangla", "English", "Religious Studies"];
